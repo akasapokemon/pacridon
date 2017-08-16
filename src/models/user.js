@@ -10,12 +10,13 @@ class User extends Record {
   }
 
   static columns() {
-    return ["nickname"];
+    return ["nickname","email","password","salt"];
   }
 
   toots() {
     return (new Collection(Toot)).where({ user_id: this.data.id });
   }
+  
 }
 
 module.exports = User;
