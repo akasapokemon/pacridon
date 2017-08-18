@@ -11,3 +11,7 @@ block content
             textarea.form-control(name="toot" placeholder="今どんなきもち？" required)
         .form-group
           input.btn.btn-primary.btn-block(type="submit" value="toot")
+      .panel-group
+        each toot in toots.reverse()
+          .panel.panel-default
+            .panel-body=toot.data.body

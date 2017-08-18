@@ -17,6 +17,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.locals.db = require('./db');
 
+const filters = require('./filters');
+filters(app);
 const routes = require('./routes');
 routes(app);
 
